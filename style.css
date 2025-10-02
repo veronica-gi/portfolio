@@ -1,0 +1,365 @@
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+/* Encabezado */
+header {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: #fff;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+/* Contenido principal */
+.container {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 0 1rem;
+}
+
+
+h2 {
+  color: #1e1e1e;
+}
+
+.foto-circulo {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;        
+  overflow: hidden;          
+  border: 3px solid #fff;    
+  box-shadow: 0 0 10px rgba(0,0,0,0.2); 
+  margin: 20px auto;       
+}
+
+.foto-circulo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;         
+  display: block;           
+}
+
+
+#presentacion {
+  padding: 1.5rem 1rem; 
+  text-align: center;
+  background-color: #f9f9f9;
+}
+
+#presentacion .container {
+  max-width: none;
+}
+
+
+#tecnologias {
+  margin-bottom: 3rem;
+}
+
+#tecnologias h2 {
+  color: #1e1e1e;
+  margin-bottom: 1rem;
+}
+
+.tech-logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.tech-logos img {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+  cursor: default;
+}
+
+.tech-logos img:hover {
+  transform: scale(1.1);
+}
+
+/* Botón */
+button {
+  background-color: #1e1e1e;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+/* Pie de página */
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+/* Sección Sobre mí con fondo y overlay */
+#sobre-mi {
+  position: relative;
+  background-image: url("img/paisaje.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 4rem 1rem;
+  text-align: center;
+  min-height: 400px;
+  overflow: hidden; /* para que las estrellas no salgan del área */
+}
+
+#sobre-mi::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0,0,0,0.3);
+  z-index: 0;
+}
+
+#sobre-mi * {
+  position: relative;
+  z-index: 1;
+}
+
+#sobre-mi h2 {
+  color: #90A3D4; 
+}
+
+
+/* Contenedor de estrellas */
+.stars {
+  pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  z-index: 2; /* encima del overlay */
+}
+
+/* Estilo de cada estrella */
+.star {
+  position: absolute;
+  background: white;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+/* Animación caída */
+@keyframes fall {
+  0% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+.tech-cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.tech-card {
+  width: 80px;
+  height: 80px;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+.tech-card.visible {
+  animation-name: fadeInUp;
+  animation-duration: 0.6s;
+  animation-fill-mode: forwards;
+  animation-timing-function: ease-out;
+  /* El delay lo pondremos desde JS */
+}
+
+/* Animación */
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Imágenes dentro de las tarjetas */
+.tech-card img {
+  max-width: 80px;
+  max-height: 80px;
+  object-fit: contain;
+  user-select: none;
+}
+
+#contacto {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.contact-btn {
+  background-color: #1e1e1e;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.contact-btn:hover {
+  background-color: #333;
+}
+
+.contact-btn .icon {
+  width: 20px;
+  height: 20px;
+  
+}
+
+/* Color personalizado para el botón de email */
+.email-btn {
+  background-color: #AB4524;
+  color: white;
+}
+
+.email-btn:hover {
+  background-color: #3149B0;
+
+}
+
+
+#proyectos {
+  padding: 4rem 1rem;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  background: linear-gradient(45deg, #B8D7F1, #dba375, #78afe9);
+  background-size: 400% 400%;
+  animation: gradientBackground 5s ease infinite;
+}
+
+@keyframes gradientBackground {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+
+.proyectos-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 900px;
+  margin: 2rem auto 0;
+}
+
+.proyecto-card {
+  display: flex;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  overflow: hidden;
+  flex-direction: row;
+  align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover {
+  transform: scale(1.02);
+}
+
+.imagen-proyecto {
+  width: 40%;
+  height: 150px;
+  background-color: #ddd; /* color temporal */
+  background-image: url('ruta-a-imagen.jpg'); /* opcional */
+  background-size: cover;
+  background-position: center;
+}
+
+.contenido-proyecto {
+  padding: 1rem;
+  text-align: left;
+  flex: 1;
+}
+
+/* Etiquetas de tecnologías en proyectos */
+.tags {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.tag {
+  background-color: #000;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  transition: background-color 0.3s ease;
+}
+
+.tag:hover {
+  background-color: #d4d4d4;
+}
+
+
