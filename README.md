@@ -1,6 +1,6 @@
 # Portfolio de Verónica García Iglesias
 
-Este es mi portfolio personal, donde muestro mis proyectos y habilidades como desarrolladora web junior.
+Este es mi portfolio personal, donde muestro mis proyectos y habilidades como desarrolladora web junior. Actualmente está en contrucción, pronto mostraré mis proyectos.
 
 ## Tecnologías
 
