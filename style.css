@@ -309,6 +309,7 @@ footer {
 }
 
 .proyecto-card {
+  position: relative;
   display: flex;
   background-color: #fff;
   border-radius: 10px;
@@ -324,12 +325,26 @@ footer {
 }
 
 .imagen-proyecto {
-  width: 40%;
-  height: 150px;
-  background-color: #ddd; /* color temporal */
-  background-image: url('ruta-a-imagen.jpg'); /* opcional */
+  width: 50%;
+  height: 200px;
+  background-color: #ddd; 
   background-size: cover;
   background-position: center;
+   cursor: pointer;
+}
+
+.imagen-proyecto:hover {
+  transform: scale(1.05);
+}
+
+.overlay-link {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;   /* igual que la imagen */
+  height: 250px; 
+  cursor: pointer;
+  z-index: 2;
 }
 
 .contenido-proyecto {
@@ -362,4 +377,27 @@ footer {
   background-color: #d4d4d4;
 }
 
+.botones-proyecto {
+  margin-top: 15px;
+}
 
+.botones-proyecto a {
+  display: inline-block;
+  padding: 6px 12px;      
+  margin-right: 10px;
+  border-radius: 6px;
+  text-decoration: none;
+  font-style: italic;      
+  font-size: 0.85rem;      
+  font-weight: 600;
+  color: #3149B0;         
+  background-color: transparent; 
+  border: 1px solid #3149B0;   
+  transition: all 0.3s ease;
+}
+
+.botones-proyecto a:hover {
+  background-color: #3149B0;
+  color: white;
+  transform: translateY(-2px);
+}
