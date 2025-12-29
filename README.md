@@ -1,17 +1,17 @@
-# Portfolio de Verónica García Iglesias
+# Portfolio of Verónica García Iglesias
 
-Este es mi portfolio personal, donde muestro mis proyectos y habilidades como desarrolladora web junior. 
+This is my personal portfolio, where I showcase my projects and skills as a junior web developer.
 
-## Tecnologías
+## Technologies
 
 - HTML5
 - CSS3
 - JavaScript (vanilla)
-- Diseño responsive
+- Responsive design
 
-## Cómo ver el portfolio
+## How to view the portfolio
 
-Abre el archivo `index.html` en tu navegador o visita la página publicada en GitHub Pages:
+Open the index.html file in your browser or visit the live version on GitHub Pages:
 
 [https://veronica-gi.github.io/portfolio/](https://veronica-gi.github.io/portfolio/)
 
